@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Font Definitions */
+@font-face {
+  font-family: "YoonGothic";
+  src: url("/fonts/YoonGothic720.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: "YoonGothic";
+  src: url("/fonts/YoonGothic730.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "YoonGothic";
+  src: url("/fonts/YoonGothic750.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: "YoonGothic";
+  src: url("/fonts/YoonGothic760.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YoonGothic";
+  src: url("/fonts/YoonGothic780.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "YoonGothic";
+  src: url("/fonts/YoonGothic790.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Base Styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "YoonGothic", "Malgun Gothic", sans-serif;
+  font-weight: 500;
+  background: #000;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* YouTube Background Styles */
+.youtube-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.youtube-background iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom Checkbox Style */
+.checkbox-custom:checked + span::before {
+  background-color: #0934ff;
+  border-color: #0934ff;
 }
